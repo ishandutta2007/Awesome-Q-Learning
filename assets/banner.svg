@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="1200" height="400">
   <defs>
     <!-- Background Gradient -->
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -36,7 +36,6 @@
       font-family: 'Outfit', 'Inter', system-ui, -apple-system, sans-serif;
       font-weight: 800;
       font-size: 64px;
-      fill: url(#primaryGrad);
     }
     
     .subtitle-text {
@@ -70,14 +69,12 @@
     }
 
     .pulse-line {
-      stroke: url(#primaryGrad);
       stroke-width: 2.5;
       stroke-dasharray: 8 16;
       animation: pulse 4s linear infinite;
     }
 
     .pulse-line-reverse {
-      stroke: url(#accentGrad);
       stroke-width: 2;
       stroke-dasharray: 6 12;
       animation: pulse 6s linear infinite reverse;
@@ -173,15 +170,15 @@
     <path d="M 900 280 L 1050 200" stroke="#1f2937" stroke-width="2" />
 
     <!-- Animated Signals (Pulses) -->
-    <path d="M 150 200 L 300 120" class="pulse-line" />
-    <path d="M 150 200 L 300 280" class="pulse-line-reverse" />
-    <path d="M 300 120 L 480 200" class="pulse-line-reverse" />
-    <path d="M 300 280 L 480 200" class="pulse-line" />
+    <path d="M 150 200 L 300 120" class="pulse-line" stroke="url(#primaryGrad)" />
+    <path d="M 150 200 L 300 280" class="pulse-line-reverse" stroke="url(#accentGrad)" />
+    <path d="M 300 120 L 480 200" class="pulse-line-reverse" stroke="url(#accentGrad)" />
+    <path d="M 300 280 L 480 200" class="pulse-line" stroke="url(#primaryGrad)" />
     
-    <path d="M 720 200 L 900 120" class="pulse-line-reverse" />
-    <path d="M 720 200 L 900 280" class="pulse-line" />
-    <path d="M 900 120 L 1050 200" class="pulse-line" />
-    <path d="M 900 280 L 1050 200" class="pulse-line-reverse" />
+    <path d="M 720 200 L 900 120" class="pulse-line-reverse" stroke="url(#accentGrad)" />
+    <path d="M 720 200 L 900 280" class="pulse-line" stroke="url(#primaryGrad)" />
+    <path d="M 900 120 L 1050 200" class="pulse-line" stroke="url(#primaryGrad)" />
+    <path d="M 900 280 L 1050 200" class="pulse-line-reverse" stroke="url(#accentGrad)" />
   </g>
 
   <!-- Interactive Nodes (State/Action representations) -->
@@ -218,7 +215,7 @@
   <!-- Central Typography (Main Banner Info) -->
   <g transform="translate(600, 190)" text-anchor="middle">
     <!-- Awesome Q-Learning Title -->
-    <text class="title-text" y="0">AWESOME Q-LEARNING</text>
+    <text class="title-text" y="0" fill="url(#primaryGrad)">AWESOME Q-LEARNING</text>
     <!-- Subtitle / Tagline -->
     <text class="subtitle-text" y="55">THE VALUE-BASED RL MAP</text>
   </g>
