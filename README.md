@@ -1,8 +1,16 @@
 # Awesome-Q-Learning 🤖✨
 
+<meta name="description" content="A comprehensive reference guide for Q-Learning, mapping its mathematical formulation, evolutionary lineage, operational execution, and modern Deep Q-Network (DQN) extensions." />
+<meta name="keywords" content="Q-Learning, Reinforcement Learning, RL, Deep Q-Network, DQN, Bellman Equation, Machine Learning, AI" />
+
 <p align="center">
   <img src="assets/banner.svg" alt="Awesome Q-Learning Banner" width="100%">
 </p>
+
+<p align="center">
+  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a> <a href="https://github.com/ishandutta2007/Awesome-Q-Learning"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Q-Learning?style=flat" alt="GitHub Stars"/></a> <a href="https://github.com/ishandutta2007/Awesome-Q-Learning/blob/main/LICENSE"><img src="https://img.shields.io/github/license/ishandutta2007/Awesome-Q-Learning?style=flat" alt="License"/></a>
+</p>
+
 
 ## 🪙 The Q-Learning & Value-Based RL Map 🗺️
 
