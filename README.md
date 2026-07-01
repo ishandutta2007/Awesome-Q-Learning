@@ -1,13 +1,18 @@
-# Awesome-Q-Learning
-## 🪙 The Q-Learning & Value-Based RL Map
+# Awesome-Q-Learning 🤖✨
 
-> **A comprehensive reference guide for Q-Learning—mapping its mathematical formulation, evolutionary lineage from classical dynamic programming, operational execution, and modern Deep Q-Network (DQN) extensions.**
+<p align="center">
+  <img src="assets/banner.svg" alt="Awesome Q-Learning Banner" width="100%">
+</p>
+
+## 🪙 The Q-Learning & Value-Based RL Map 🗺️
+
+> **A comprehensive reference guide for Q-Learning—mapping its mathematical formulation, evolutionary lineage from classical dynamic programming, operational execution, and modern Deep Q-Network (DQN) extensions.** 🚀
 
 Q-Learning revolutionized reinforcement learning by introducing a model-free, off-policy framework to learn optimal action-value functions. This single innovation bridged the gap between rigid, environment-dependent dynamic programming and model-agnostic autonomous control.
 
 ---
 
-## 📅 The Evolutionary Timeline
+## 📅 The Evolutionary Timeline 🧬
 
 The architectural shift from full environmental awareness to sample-driven, model-free temporal difference learning.
 
@@ -22,19 +27,19 @@ flowchart TD
 
 ---
 
-## 🧭 Deep Dive: From Precursors to Q-Learning
+## 🧭 Deep Dive: From Precursors to Q-Learning 🔍
 
-### 1. Bellman's Dynamic Programming & Value Iteration (1957)
+### 1. Bellman's Dynamic Programming & Value Iteration (1957) 🧠
 Richard Bellman formulated the foundation of optimal control via the Markov Decision Process (MDP).
 *   **The Constraint:** It is **model-based**. To calculate the optimal value function, the agent must have perfect, explicit knowledge of the environment's transition probabilities \(P(s' \mid s, a)\) and reward functions R(s, a).
 *   **Limitation:** Fails in real-world scenarios where the environment's physics, rules, or transition dynamics are too complex to model mathematically (The Curse of Dimensionality).
 
-### 2. Temporal Difference (TD) Learning (Sutton, 1988)
+### 2. Temporal Difference (TD) Learning (Sutton, 1988) ⏱️
 Richard Sutton introduced TD learning, combining the sample-driven nature of Monte Carlo methods with the bootstrapping nature of Dynamic Programming.
 *   **The Advantage:** It is **model-free**. The agent learns directly from raw experience (episodes of interactions) without needing a transition matrix. It updates estimates based on individual steps rather than waiting for the entire episode to end.
 *   **Limitation:** Classic TD learning evaluates a static, fixed policy (π) and calculates the state-value function V(s). It does not directly provide an action-selection mechanism for control tasks unless paired with a model to look ahead at subsequent states.
 
-### 3. Q-Learning (Watkins, 1989)
+### 3. Q-Learning (Watkins, 1989) ⚙️
 Christopher Watkins solved the control loop limitation by shifting the optimization target from the state-value function V(s) to the **action-value function Q(s, a)**. 
 
 *   **The Core Innovation:** The Q-function tracks the expected long-term return of taking a specific action a in a specific state s, and subsequently following the optimal policy.
@@ -42,7 +47,7 @@ Christopher Watkins solved the control loop limitation by shifting the optimizat
 
 ---
 
-## 🧮 Mathematical Formulation & The Bellman Equation
+## 🧮 Mathematical Formulation & The Bellman Equation 📐
 
 The core update rule for Tabular Q-Learning is driven by the **Temporal Difference (TD) Error**:
 
@@ -56,7 +61,7 @@ The core update rule for Tabular Q-Learning is driven by the **Temporal Differen
 
 ---
 
-## 🎛️ Algorithmic Execution: Tabular Q-Learning
+## 🎛️ Algorithmic Execution: Tabular Q-Learning 💻
 
 Tabular Q-Learning stores values inside a discrete matrix where rows represent states and columns represent actions.
 
@@ -95,7 +100,7 @@ def train_q_learning(env, alpha=0.1, gamma=0.99, epsilon=0.1, episodes=1000):
 
 ---
 
-## 🚀 The Deep Learning Evolution: Deep Q-Networks (DQN)
+## 🚀 The Deep Learning Evolution: Deep Q-Networks (DQN) 🧠🔋
 
 Tabular Q-Learning collapses when the state space becomes infinite or continuous (e.g., raw pixels of a video game). In 2013/2015, DeepMind introduced **DQN**, replacing the discrete lookup matrix with a deep neural network function approximator: $Q(s, a; \theta) \approx Q^*(s, a)$.
 
@@ -107,7 +112,7 @@ To stabilize neural-network-driven Q-learning, DQN introduced two critical mecha
 1.  **Double DQN:** Decouples the action *selection* from the action *evaluation* in the target calculation to eliminate the natural overestimation bias of classic Q-learning.
 2.  **Dueling DQN:** Splits the neural network architecture into two stream channels: one predicting the state-value function $V(s)$ and another tracking the advantage of individual actions $A(s,a)$, improving optimization efficiency.
 
-## ✅ Summary of the Outcome
+## ✅ Summary of the Outcome 🏆
 
 Q-learning transitions value-based reinforcement learning from deterministic mathematical evaluation into empirical, experience-driven pattern tracking capable of scaling to high-dimensional control environments.
 
