@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="1200" height="400">
   <defs>
     <!-- Background Gradient -->
@@ -30,114 +29,11 @@
     </filter>
   </defs>
 
-  <style>
-    /* CSS Styles & Keyframe Animations */
-    .title-text {
-      font-family: 'Outfit', 'Inter', system-ui, -apple-system, sans-serif;
-      font-weight: 800;
-      font-size: 64px;
-    }
-    
-    .subtitle-text {
-      font-family: 'Inter', system-ui, sans-serif;
-      font-weight: 500;
-      font-size: 20px;
-      fill: #9ca3af;
-      letter-spacing: 4px;
-    }
-
-    /* Grid & Decorative Line Animations */
-    .grid-lines {
-      stroke: #1f2937;
-      stroke-width: 1;
-      opacity: 0.4;
-    }
-
-    /* Pulse/Signal animation for connections */
-    @keyframes pulse {
-      0% {
-        stroke-dashoffset: 24;
-        opacity: 0.4;
-      }
-      50% {
-        opacity: 1;
-      }
-      100% {
-        stroke-dashoffset: 0;
-        opacity: 0.4;
-      }
-    }
-
-    .pulse-line {
-      stroke-width: 2.5;
-      stroke-dasharray: 8 16;
-      animation: pulse 4s linear infinite;
-    }
-
-    .pulse-line-reverse {
-      stroke-width: 2;
-      stroke-dasharray: 6 12;
-      animation: pulse 6s linear infinite reverse;
-    }
-
-    /* Node hover/floating animation */
-    @keyframes float {
-      0%, 100% {
-        transform: translateY(0px);
-      }
-      50% {
-        transform: translateY(-8px);
-      }
-    }
-
-    @keyframes float-delayed {
-      0%, 100% {
-        transform: translateY(0px);
-      }
-      50% {
-        transform: translateY(8px);
-      }
-    }
-
-    .float-group-1 {
-      animation: float 5s ease-in-out infinite;
-    }
-
-    .float-group-2 {
-      animation: float-delayed 6s ease-in-out infinite;
-    }
-
-    /* Orb pulsing glow */
-    @keyframes orbGlow {
-      0%, 100% {
-        opacity: 0.4;
-      }
-      50% {
-        opacity: 1;
-      }
-    }
-
-    .glow-node {
-      fill: #8b5cf6;
-      animation: orbGlow 3s ease-in-out infinite;
-    }
-
-    .glow-node-accent {
-      fill: #10b981;
-      animation: orbGlow 4s ease-in-out infinite;
-    }
-
-    .glow-node-pink {
-      fill: #ec4899;
-      animation: orbGlow 3.5s ease-in-out infinite;
-    }
-  </style>
-
   <!-- Background -->
   <rect width="100%" height="100%" fill="url(#bgGrad)" />
 
   <!-- Grid Pattern (Dynamic aesthetic) -->
-  <g class="grid-lines">
+  <g stroke="#1f2937" stroke-width="1" opacity="0.4">
     <!-- Horizontal lines -->
     <line x1="0" y1="50" x2="1200" y2="50" />
     <line x1="0" y1="150" x2="1200" y2="150" />
@@ -156,7 +52,7 @@
   <circle cx="1050" cy="100" r="120" fill="#3b82f6" opacity="0.15" filter="url(#glow)" />
   <circle cx="150" cy="300" r="150" fill="#ec4899" opacity="0.1" filter="url(#glow)" />
 
-  <!-- Animated Connections (RL Policy Graph Representation) -->
+  <!-- Policy Graph Connections -->
   <g opacity="0.8">
     <!-- Connections -->
     <path d="M 150 200 L 300 120" stroke="#1f2937" stroke-width="2" />
@@ -169,63 +65,63 @@
     <path d="M 900 120 L 1050 200" stroke="#1f2937" stroke-width="2" />
     <path d="M 900 280 L 1050 200" stroke="#1f2937" stroke-width="2" />
 
-    <!-- Animated Signals (Pulses) -->
-    <path d="M 150 200 L 300 120" class="pulse-line" stroke="url(#primaryGrad)" />
-    <path d="M 150 200 L 300 280" class="pulse-line-reverse" stroke="url(#accentGrad)" />
-    <path d="M 300 120 L 480 200" class="pulse-line-reverse" stroke="url(#accentGrad)" />
-    <path d="M 300 280 L 480 200" class="pulse-line" stroke="url(#primaryGrad)" />
+    <!-- Colored Active Flow Lines -->
+    <path d="M 150 200 L 300 120" stroke="url(#primaryGrad)" stroke-width="2.5" stroke-dasharray="6 6" />
+    <path d="M 150 200 L 300 280" stroke="url(#accentGrad)" stroke-width="2" stroke-dasharray="4 4" />
+    <path d="M 300 120 L 480 200" stroke="url(#accentGrad)" stroke-width="2" stroke-dasharray="4 4" />
+    <path d="M 300 280 L 480 200" stroke="url(#primaryGrad)" stroke-width="2.5" stroke-dasharray="6 6" />
     
-    <path d="M 720 200 L 900 120" class="pulse-line-reverse" stroke="url(#accentGrad)" />
-    <path d="M 720 200 L 900 280" class="pulse-line" stroke="url(#primaryGrad)" />
-    <path d="M 900 120 L 1050 200" class="pulse-line" stroke="url(#primaryGrad)" />
-    <path d="M 900 280 L 1050 200" class="pulse-line-reverse" stroke="url(#accentGrad)" />
+    <path d="M 720 200 L 900 120" stroke="url(#accentGrad)" stroke-width="2" stroke-dasharray="4 4" />
+    <path d="M 720 200 L 900 280" stroke="url(#primaryGrad)" stroke-width="2.5" stroke-dasharray="6 6" />
+    <path d="M 900 120 L 1050 200" stroke="url(#primaryGrad)" stroke-width="2.5" stroke-dasharray="6 6" />
+    <path d="M 900 280 L 1050 200" stroke="url(#accentGrad)" stroke-width="2" stroke-dasharray="4 4" />
   </g>
 
   <!-- Interactive Nodes (State/Action representations) -->
   <!-- Left Node Group -->
-  <g class="float-group-1">
+  <g>
     <circle cx="150" cy="200" r="16" fill="#111827" stroke="#3b82f6" stroke-width="3" />
-    <circle cx="150" cy="200" r="6" class="glow-node" />
+    <circle cx="150" cy="200" r="6" fill="#8b5cf6" />
     
     <circle cx="300" cy="120" r="14" fill="#111827" stroke="#8b5cf6" stroke-width="3" />
-    <circle cx="300" cy="120" r="5" class="glow-node-pink" />
+    <circle cx="300" cy="120" r="5" fill="#ec4899" />
 
     <circle cx="300" cy="280" r="14" fill="#111827" stroke="#10b981" stroke-width="3" />
-    <circle cx="300" cy="280" r="5" class="glow-node-accent" />
+    <circle cx="300" cy="280" r="5" fill="#10b981" />
     
     <circle cx="480" cy="200" r="18" fill="#111827" stroke="#ec4899" stroke-width="3" />
-    <circle cx="480" cy="200" r="7" class="glow-node-pink" />
+    <circle cx="480" cy="200" r="7" fill="#ec4899" />
   </g>
 
   <!-- Right Node Group -->
-  <g class="float-group-2">
+  <g>
     <circle cx="720" cy="200" r="18" fill="#111827" stroke="#3b82f6" stroke-width="3" />
-    <circle cx="720" cy="200" r="7" class="glow-node" />
+    <circle cx="720" cy="200" r="7" fill="#8b5cf6" />
     
     <circle cx="900" cy="120" r="14" fill="#111827" stroke="#10b981" stroke-width="3" />
-    <circle cx="900" cy="120" r="5" class="glow-node-accent" />
+    <circle cx="900" cy="120" r="5" fill="#10b981" />
 
     <circle cx="900" cy="280" r="14" fill="#111827" stroke="#8b5cf6" stroke-width="3" />
-    <circle cx="900" cy="280" r="5" class="glow-node-pink" />
+    <circle cx="900" cy="280" r="5" fill="#ec4899" />
     
     <circle cx="1050" cy="200" r="16" fill="#111827" stroke="#ec4899" stroke-width="3" />
-    <circle cx="1050" cy="200" r="6" class="glow-node" />
+    <circle cx="1050" cy="200" r="6" fill="#8b5cf6" />
   </g>
 
   <!-- Central Typography (Main Banner Info) -->
   <g transform="translate(600, 190)" text-anchor="middle">
     <!-- Awesome Q-Learning Title -->
-    <text class="title-text" y="0" fill="url(#primaryGrad)">AWESOME Q-LEARNING</text>
+    <text y="0" fill="url(#primaryGrad)" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="64">AWESOME Q-LEARNING</text>
     <!-- Subtitle / Tagline -->
-    <text class="subtitle-text" y="55">THE VALUE-BASED RL MAP</text>
+    <text y="55" fill="#9ca3af" font-family="system-ui, -apple-system, sans-serif" font-weight="500" font-size="20" style="letter-spacing: 4px;">THE VALUE-BASED RL MAP</text>
   </g>
 
   <!-- Tech Symbols / Equation Glyphs (Floating subtly in corners) -->
-  <g class="float-group-1" opacity="0.3" fill="#ffffff" font-family="Courier, monospace" font-size="22">
+  <g opacity="0.3" fill="#ffffff" font-family="Courier, monospace" font-size="22">
     <text x="80" y="80">Q(s, a)</text>
     <text x="1000" y="320">r + &#947; max Q</text>
   </g>
-  <g class="float-group-2" opacity="0.3" fill="#ffffff" font-family="Courier, monospace" font-size="22">
+  <g opacity="0.3" fill="#ffffff" font-family="Courier, monospace" font-size="22">
     <text x="1000" y="80">&#960;(a|s)</text>
     <text x="120" y="320">TD Error</text>
   </g>
