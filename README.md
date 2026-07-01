@@ -11,7 +11,15 @@ Q-Learning revolutionized reinforcement learning by introducing a model-free, of
 
 The architectural shift from full environmental awareness to sample-driven, model-free temporal difference learning.
 
-[1950s: Bellman's Dynamic Programming] ──► Model-based value iteration (Requires transition matrix P)│▼[1988: Temporal Difference Learning]   ──► Model-free state-value V(s) tracking (Sutton)│▼[1989: Q-Learning (Watkins)]           ──► Off-policy action-value Q(s,a) estimation (O(SA) table)│▼[2015: Deep Q-Networks (DQN)]          ──► Neural network function approximation for continuous spaces│▼[Modern: Rainbow / Double DQN]         ──► Addressing overestimation bias and variance stochastically
+```mermaid
+flowchart TD
+    A["1950s: Bellman's Dynamic Programming<br/>Model-Based Value Iteration (Requires Transition Matrix P)"]
+    --> B["1988: Temporal Difference Learning<br/>Model-Free State-Value V(s) Tracking (Sutton)"]
+    --> C["1989: Q-Learning (Watkins)<br/>Off-Policy Action-Value Q(s,a) Estimation (O(SA) Table)"]
+    --> D["2015: Deep Q-Networks (DQN)<br/>Neural Network Function Approximation for Continuous Spaces"]
+    --> E["Modern: Rainbow / Double DQN<br/>Reducing Overestimation Bias & Training Variance"]
+```
+
 ---
 
 ## 🧭 Deep Dive: From Precursors to Q-Learning
