@@ -124,3 +124,14 @@ To stabilize neural-network-driven Q-learning, DQN introduced two critical mecha
 
 Q-learning transitions value-based reinforcement learning from deterministic mathematical evaluation into empirical, experience-driven pattern tracking capable of scaling to high-dimensional control environments.
 
+##  Star History
+<div align="center">
+<a href="https://www.star-history.com/?repos=ishandutta2007%2FAwesome-Q-Learning&type=date&legend=bottom-right">
+<picture>
+<source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=ishandutta2007/Awesome-Q-Learning&type=date&theme=dark&legend=bottom-right" />
+<source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=ishandutta2007/Awesome-Q-Learning&type=date&legend=bottom-right" />
+<img alt="Star History Chart" src="https://api.star-history.com/chart?repos=ishandutta2007/Awesome-Q-Learning&type=date&legend=bottom-right" />
+</picture>
+</a>
+</div>
+
