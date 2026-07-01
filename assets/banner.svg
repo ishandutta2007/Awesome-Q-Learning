@@ -113,11 +113,9 @@
     /* Orb pulsing glow */
     @keyframes orbGlow {
       0%, 100% {
-        r: 8px;
-        opacity: 0.7;
+        opacity: 0.4;
       }
       50% {
-        r: 12px;
         opacity: 1;
       }
     }
